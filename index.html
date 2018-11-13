@@ -2,28 +2,64 @@
 <html>
 <head>
 
+ <!DOCTYPE html>
+<html>
+<head>
+
   <head>
   <body>
-    <h1 id="titolo"> ESTRAI A SORTE </h1>
-   <input type="button" value="ESTRAI!!!" onClick="scegli()"/>
+    <h1 id="titolo"> ESTRAZIONE A SORTE </h1>
     
 
+   <input type="button" id="button" value="ESTRAI!!!" onClick="scegli()"/>
+  
+  
+   <br><br><label>L'INTERROGATO DI OGGI E' 
+   <input id="nome" type="text">
+   </label>
+   
+   
+   
+   <div>
+   <ul>
+   <li>IDAN</li>
+   <li>ALEX</li>
+   <li>LEAM</li>
+   <li>SACHA</li>
+   <li>MICHELLE</li>
+   <li>ISAAC</li>
+   <li>JACOPO</li>
+   <li>GADI</li>
+   <li>NOEMI</li>
+   <li>DAVID</li>
+   <li>GABRIEL</li>
+   <li>LEO</li>
+   <li>NICOLO'</li>
+   <li>ROMINA</li>
+   <li>SIMON</li> 
+   </ul>
+   </div>
+  
+   
+  <script>
+    var titolo = document.getElementById("titolo");
+    console.log(titolo);
+    titolo.style.backgroundColor = "yellow";
+    titolo.style.textAlign = "center";
     
-    <script>
+    var lista = ["IDAN","ALEX","LEAM","SACHA","MICHELLE","ISAAC","JACOPO","GADI","NOEMI","DAVID","GABRIEL","LEO","NICOLO'","ROMINA","SIMON"];
     
     function scegli() {
-     var x = Math.floor(Math.random() * 15) +1
-     document.write(x);
+     var x = Math.floor(Math.random() * lista.length); 
+     document.getElementById("nome").value += "," + lista[x]
+     var fuori = document.getElementsByTagName("li");
+     fuori[x].style.backgroundColor = "green";
+     }
     
-    }
-                   
-    </script>
+   
+</script>
     
-    
-    
-    
-    
-  
+   
     
 </body>
 </html>    
